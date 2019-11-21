@@ -3,10 +3,30 @@
 
 #include "pch.h"
 #include <iostream>
+#include <SFML\Graphics.hpp>
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	sf::RenderWindow window(sf::VideoMode(1000, 1000), "SFML works!");
+	sf::CircleShape shape(500.f);
+	shape.setFillColor(sf::Color::Cyan);
+
+	while (window.isOpen())
+	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+
+		window.clear();
+		window.draw(shape);
+		window.display();
+	}
+
+	return 0;
+	std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
