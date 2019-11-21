@@ -7,7 +7,7 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(1000, 1000), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
 	sf::CircleShape shape(400.f);
 	shape.setFillColor(sf::Color::Cyan);
 
@@ -24,9 +24,7 @@ int main()
 		window.draw(shape);
 		window.display();
 	}
-
 	return 0;
-	std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
